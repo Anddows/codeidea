@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<h4 id="text-input" class="text6">Buyurtmangizni aniqroq yozishga harakat qiling!</h4>
+<div class="line"></div>
+<br>
+<input id="text-input3" class="text-input" placeholder="Buyurtmangizni kiriting...">
+<br><br>
+<input id="text-input4" class="text-input" placeholder="Telegram manzilingizni kiriting...">
+<br><br>
+<button id="button" class="button2" type="submit" onclick="send()">Send</button>
+
+<script>
+function send() {
+        // var text = document.getElementById("text-input3").value;
+        
+	var text1 = document.getElementById('text-input3').value;
+	var text2 = document.getElementById('text-input4').value;
+
+	var my_text = `<b>Buyurtma: </b>${text1}%0A<b>Telegram: </b>${text2}`
+
+	var token = "1780204922:AAH4j95-eISa4m-7HBsYlOuRnBc3TQ1rKKw";
+	var chat_id = '@code_idea_team';
+	var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}&parse_mode=html`
+
+	let api = new XMLHttpRequest();
+	api.open("GET", url, true);
+	api.send();
+
+    document.getElementById("text-input").innerHTML = '<h4 id="order" class="text6"><font color="#006064">Yuborildi! </font>Tez orada siz bilan bog\'lanamiz</h4>';
+    console.log("Yuborildi!")
+    }
+</script>
+
+{% endblock content %} 

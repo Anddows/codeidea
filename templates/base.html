@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Idea | {{ user.username }}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel = "icon" href = "https://anddows.github.io/codeideaicon.png" type = "image/x-icon">
+</head>
+<body>
+<!--<header>-->
+<!--    <h1 class="text1"><a href="{% url 'home' %}" style="text-decoration: none;">k1ki dev</a></h1>-->
+<!--</header>-->
+<div class="card">
+
+    <h4 class="text1"><a href="{% url 'home' %}" style="text-decoration: none;">Code Idea</a></h4>
+
+    <h4 class="text1">Xush kelibsiz, {{ user.username }}</h4>
+     <a href="{% url 'about' %}"><button class="button">About</button></a>
+     <a href="{% url 'service' %}"><button class="button">Service</button></a>
+     <a href="{% url 'ccs' %}"><button class="button">CCS</button></a>
+     <a href="{% url 'projects' %}"><button class="button">Projects</button></a>
+     <a href="{% url 'home' %}"><button class="button">Home</button></a>
+
+</div>
+
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+
+<br><br>
+<!--<footer>-->
+<!--    <h4 class="text2"><a href="{% url 'post-new' %}" style="text-decoration: none;">Yangi Post</a></h4>-->
+<!--</footer>-->
+
+<div class="card2">
+
+</div>
+<style>
+hr { width: 200px; }
+
+a { text-decoration: none; }
+
+@media  only screen and (min-width:425px) {   
+
+}
+
+@media   (min-width:425px) and (max-width:1280px ) {   
+
+}
+
+
+.text1 {
+  color: #FFFFFF;
+  float: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+}
+
+.text2 {
+  color: #009688;
+  margin-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.text3 {
+  color: #424242;
+  margin-left: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.text4 {
+  color: #424242;
+  margin-left: 20px;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* text 6 */ 
+.text6 {
+      color: #424242;
+      text-decoration: none;
+      margin-left: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .text7 {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #757575;
+   margin-left: 10px;
+   padding: 10px;
+
+ }
+
+
+p { font-family: sans-serif; }
+
+.card {
+        width: 100%;
+        height: 60px;
+        border: none;
+        display: inline-block;
+        padding: 1px;
+        background: #0277BD;
+}
+    .button {
+        width: 100px;
+        height: 50px;
+        margin-left: 10px;
+        display: inline-block;
+        margin-top: 4px;
+        float: right;
+        border: none;
+        background: none;
+        color: white;
+    }
+
+    .button {
+        transition-duration: 0.4s;
+
+    }
+
+    .button:hover {
+        color: #212121;
+        background: #FFFFFF;
+    }
+
+    .button2 {
+      width: 100px;
+      height: 50px;
+      border: none;
+      background: none;
+      float: left;
+      color: #424242;
+      margin-left: 10px;
+    }
+
+    .button2 {
+      transition-duration: 0.4s;
+    }
+
+    .button2:hover {
+      color: white;
+      background: #424242;
+    }
+
+    .button3 {
+      width: 200px;
+      height: 50px;
+      border: none;
+      background: none;
+      color: #424242;
+      margin-left: 10px;
+    }
+
+    .button3 {
+      transition-duration: 0.4s;
+    }
+
+    .button3:hover {
+      color: white;
+      background: #424242;
+    }
+
+    .text-input {
+     width: 300px;
+     height: 30px;
+     padding-left: 10px;
+     margin-left: 10px;
+     background: none;
+     border: none;
+     border-radius: 20px 20px;
+   }
+
+    .line {
+       width: 100px;
+       height: 4px;
+       border: none;
+       display: inline-block;
+       float: left;
+       background: #039BE5;
+   }
+
+   .card-list {
+    width: 600px;
+    height: 300px;
+    border: none;
+    background: #FFFFFF;
+    margin-left: 40px;
+    margin-top: 40px;
+    float: left;
+    text-align: left;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 5px #212121;
+   }
+
+   .card-list:hover {  transform: scale(1.1); }
+
+   .card-text {
+     text-align: center;
+   }
+  
+
+
+</style>
+
+</body>
+</html>
